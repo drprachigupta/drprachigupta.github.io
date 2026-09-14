@@ -3,636 +3,738 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="description" content="Prachi Gupta, PhD — Cancer Biology, Immuno-Oncology, Tumor Microenvironment and Translational Cancer Research.">
+  <meta name="author" content="Prachi Gupta, PhD">
   <title>Prachi Gupta, PhD | Cancer Biology & Immuno-Oncology</title>
 
-  <meta name="description"
-        content="Professional research website of Prachi Gupta, PhD — Cancer Biology, Immuno-Oncology, Tumor Microenvironment and Translational Cancer Research.">
-
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root{
+      --navy:#183b5b;
+      --navy2:#245d7f;
+      --blue:#075ea8;
+      --ink:#17324d;
+      --muted:#52677b;
+      --bg:#f5f8fb;
+      --white:#ffffff;
+      --line:#dfe7ee;
+      --soft:#eaf2f8;
+      --shadow:0 8px 24px rgba(19,49,75,.08);
+      --radius:12px;
+      --max:1000px;
     }
 
-    html {
-      scroll-behavior: smooth;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.65;
+    }
+    a{color:var(--blue);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .hero{
+      background:linear-gradient(135deg,var(--navy),var(--navy2));
+      color:#fff;
+      padding:72px 24px 66px;
+    }
+    .hero-inner{max-width:var(--max);margin:auto}
+    .eyebrow{
+      display:inline-block;
+      font-size:.82rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      opacity:.86;
+      margin-bottom:12px;
+      font-weight:700;
+    }
+    h1{
+      font-size:clamp(2.5rem,6vw,4.1rem);
+      line-height:1.08;
+      margin:0 0 16px;
+      letter-spacing:-.035em;
+    }
+    .tagline{
+      font-size:1.2rem;
+      margin:0 0 24px;
+      max-width:900px;
+    }
+    .hero-summary{
+      max-width:820px;
+      font-size:1.02rem;
+      opacity:.96;
+      margin:0 0 28px;
+    }
+    .buttons{display:flex;flex-wrap:wrap;gap:10px}
+    .btn{
+      display:inline-block;
+      padding:11px 18px;
+      border:1px solid rgba(255,255,255,.85);
+      border-radius:7px;
+      color:#fff;
+      font-weight:700;
+      text-decoration:none;
+    }
+    .btn:hover{background:#fff;color:var(--navy);text-decoration:none}
+
+    nav{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:#fff;
+      border-bottom:1px solid var(--line);
+      box-shadow:0 2px 8px rgba(0,0,0,.04);
+    }
+    .nav-inner{
+      max-width:var(--max);
+      margin:auto;
+      display:flex;
+      justify-content:center;
+      gap:26px;
+      padding:14px 18px;
+      flex-wrap:wrap;
+    }
+    nav a{font-weight:700;font-size:.9rem}
+    nav a:hover{text-decoration:none}
+
+    main{max-width:var(--max);margin:auto;padding:0 24px}
+    section{padding:64px 0}
+    section + section{border-top:1px solid var(--line)}
+    h2{
+      font-size:2rem;
+      margin:0 0 12px;
+      letter-spacing:-.02em;
+    }
+    .section-lead{color:var(--muted);max-width:800px;margin:0 0 30px}
+    .about-grid{
+      display:grid;
+      grid-template-columns:1.25fr .75fr;
+      gap:28px;
+    }
+    .card{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:25px;
+      box-shadow:var(--shadow);
+    }
+    .card h3{margin-top:0;margin-bottom:8px}
+    .small{font-size:.92rem;color:var(--muted)}
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:20px;
+    }
+    .stat{
+      background:var(--soft);
+      border-radius:10px;
+      padding:18px 14px;
+      text-align:center;
+    }
+    .stat strong{display:block;font-size:1.55rem;color:var(--navy)}
+    .stat span{font-size:.8rem;color:var(--muted)}
+
+    .research-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .research-card{height:100%}
+    .research-card .num{
+      color:var(--blue);
+      font-weight:800;
+      font-size:.85rem;
+      letter-spacing:.08em;
     }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
-      color: #243447;
-      background: #f7f9fc;
+    .timeline{position:relative;margin-top:32px}
+    .timeline:before{
+      content:"";
+      position:absolute;
+      left:9px;top:5px;bottom:5px;
+      width:2px;background:#cbdbe7;
+    }
+    .role{
+      position:relative;
+      padding-left:38px;
+      margin-bottom:38px;
+    }
+    .role:before{
+      content:"";
+      position:absolute;
+      left:3px;top:7px;
+      width:14px;height:14px;
+      border-radius:50%;
+      background:var(--blue);
+      border:3px solid var(--bg);
+      box-shadow:0 0 0 2px var(--blue);
+    }
+    .role h3{margin:0 0 3px}
+    .role .meta{font-weight:700;color:var(--blue);margin-bottom:4px}
+    .role .topic{font-style:italic;color:var(--muted);margin-bottom:10px}
+    .role ul{margin:8px 0 0;padding-left:20px}
+
+    .highlight-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .highlight{
+      background:var(--navy);
+      color:#fff;
+      border-radius:var(--radius);
+      padding:24px;
+    }
+    .highlight h3{margin-top:0}
+    .highlight p{margin-bottom:0;opacity:.94}
+
+    .pub{
+      padding:20px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .pub:last-child{border-bottom:0}
+    .pub-title{font-weight:800;font-size:1.02rem}
+    .pub-meta{color:var(--muted);font-size:.92rem;margin-top:4px}
+    .pub-note{
+      display:inline-block;
+      margin-top:7px;
+      background:var(--soft);
+      color:var(--blue);
+      border-radius:20px;
+      padding:3px 9px;
+      font-size:.76rem;
+      font-weight:700;
     }
 
-    a {
-      color: #1769aa;
-      text-decoration: none;
+    .skill-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .skill-group h3{margin:0 0 12px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{
+      background:#edf4f8;
+      border:1px solid #d6e4ed;
+      color:#214b68;
+      border-radius:20px;
+      padding:6px 10px;
+      font-size:.82rem;
+      font-weight:700;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .edu-grid,.award-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
     }
+    .edu h3,.award h3{margin-bottom:5px}
+    .year{color:var(--blue);font-weight:700}
 
-    .hero {
-      background: linear-gradient(135deg, #17324d, #245b7a);
-      color: white;
-      padding: 80px 20px;
+    .contact{
+      background:linear-gradient(135deg,#eaf3f8,#f7fafc);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:30px;
     }
-
-    .hero-content {
-      max-width: 1050px;
-      margin: auto;
+    footer{
+      text-align:center;
+      padding:28px 20px;
+      background:#102e46;
+      color:#dbe8f1;
+      font-size:.88rem;
     }
+    footer a{color:#fff}
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 12px;
-    }
-
-    .hero h2 {
-      font-size: 22px;
-      font-weight: 400;
-      margin-bottom: 24px;
-      color: #e7f1f7;
-    }
-
-    .hero p {
-      max-width: 850px;
-      font-size: 18px;
-      color: #edf5f9;
-    }
-
-    .buttons {
-      margin-top: 30px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 11px 18px;
-      margin: 5px 8px 5px 0;
-      border: 1px solid white;
-      border-radius: 6px;
-      color: white;
-      font-weight: bold;
-    }
-
-    .button:hover {
-      background: white;
-      color: #17324d;
-      text-decoration: none;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: white;
-      border-bottom: 1px solid #ddd;
-      padding: 14px 20px;
-      text-align: center;
-    }
-
-    nav a {
-      margin: 0 12px;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    section {
-      max-width: 1050px;
-      margin: auto;
-      padding: 65px 20px;
-    }
-
-    section h2 {
-      font-size: 30px;
-      margin-bottom: 25px;
-      color: #17324d;
-    }
-
-    .intro {
-      font-size: 18px;
-      max-width: 900px;
-    }
-
-    .research-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      margin-top: 25px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.07);
-      border: 1px solid #e6ebf0;
-    }
-
-    .card h3 {
-      color: #245b7a;
-      margin-bottom: 10px;
-    }
-
-    .timeline {
-      border-left: 3px solid #245b7a;
-      padding-left: 25px;
-    }
-
-    .timeline-item {
-      margin-bottom: 35px;
-    }
-
-    .timeline-item h3 {
-      color: #17324d;
-      margin-bottom: 4px;
-    }
-
-    .date {
-      color: #6c7a89;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-
-    ul {
-      padding-left: 22px;
-    }
-
-    li {
-      margin-bottom: 7px;
-    }
-
-    .publication {
-      background: white;
-      padding: 22px;
-      margin-bottom: 18px;
-      border-radius: 8px;
-      border-left: 4px solid #245b7a;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-
-    .publication strong {
-      color: #17324d;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .skill {
-      background: white;
-      border: 1px solid #d8e1e8;
-      border-radius: 20px;
-      padding: 8px 14px;
-      font-size: 14px;
-    }
-
-    .education-item {
-      background: white;
-      padding: 20px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-
-    .contact {
-      background: #edf4f8;
-      text-align: center;
-      max-width: none;
-    }
-
-    .contact-content {
-      max-width: 900px;
-      margin: auto;
-    }
-
-    footer {
-      background: #17324d;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      font-size: 14px;
-    }
-
-    @media (max-width: 700px) {
-      .hero h1 {
-        font-size: 36px;
+    @media(max-width:800px){
+      .about-grid,.research-grid,.highlight-grid,.skill-groups,.edu-grid,.award-grid{
+        grid-template-columns:1fr;
       }
-
-      .research-grid {
-        grid-template-columns: 1fr;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px 8px;
-      }
+      .stats{grid-template-columns:1fr}
+      .nav-inner{gap:15px}
+      section{padding:48px 0}
+      .hero{padding-top:56px}
     }
   </style>
 </head>
 
 <body>
 
-  <header class="hero">
-    <div class="hero-content">
-
-      <h1>Prachi Gupta, PhD</h1>
-
-      <h2>
-        Cancer Biology · Immuno-Oncology · Tumor Microenvironment · Translational Research
-      </h2>
-
-      <p>
-        PhD-trained cancer biologist with 7+ years of postdoctoral research
-        experience in cancer biology, immuno-oncology, tumor microenvironment,
-        and translational cancer research.
-      </p>
-
-      <div class="buttons">
-        <a class="button"
-           href="https://scholar.google.com/citations?user=qyJ0aRIAAAAJ&hl=en"
-           target="_blank">
-          Google Scholar
-        </a>
-
-        <a class="button"
-           href="https://www.linkedin.com/in/prachi-gupta-609/"
-           target="_blank">
-          LinkedIn
-        </a>
-      </div>
-
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Cancer Biology · Immuno-Oncology · Translational Research</div>
+    <h1>Prachi Gupta, PhD</h1>
+    <p class="tagline">
+      Cancer biologist focused on tumor–immune interactions, immune suppression,
+      extracellular vesicles, T-cell biology, therapeutic target validation, and
+      translational cancer research.
+    </p>
+    <p class="hero-summary">
+      PhD-trained cancer researcher with 7+ years of postdoctoral research experience
+      spanning ovarian cancer, renal cell carcinoma, melanoma, breast cancer,
+      tumor microenvironment biology, immunotherapy, and preclinical model development.
+    </p>
+    <div class="buttons">
+      <a class="btn" href="https://scholar.google.com/citations?user=qyJ0aRIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="btn" href="https://www.linkedin.com/in/prachi-gupta-609/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <nav>
+<nav>
+  <div class="nav-inner">
     <a href="#about">About</a>
     <a href="#research">Research</a>
     <a href="#experience">Experience</a>
+    <a href="#impact">Highlights</a>
     <a href="#publications">Publications</a>
     <a href="#expertise">Expertise</a>
     <a href="#education">Education</a>
+    <a href="#awards">Awards</a>
     <a href="#contact">Contact</a>
-  </nav>
+  </div>
+</nav>
 
-  <section id="about">
+<main>
 
-    <h2>About</h2>
-
-    <p class="intro">
-      My research focuses on understanding tumor–immune interactions,
-      mechanisms of immune suppression, therapeutic target validation,
-      and the development of preclinical models to advance cancer research.
-    </p>
-
-    <br>
-
-    <p class="intro">
-      My research experience spans ovarian cancer, breast cancer, renal cell
-      carcinoma, melanoma, tumor microenvironment, extracellular vesicles,
-      T-cell biology, immunotherapy, biomarker discovery, and translational
-      cancer research.
-    </p>
-
-  </section>
-
-  <section id="research">
-
-    <h2>Research Interests</h2>
-
-    <div class="research-grid">
-
-      <div class="card">
-        <h3>Immuno-Oncology</h3>
-        <p>
-          Understanding mechanisms governing immune responses against tumors
-          and identifying approaches to improve cancer immunotherapy.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Tumor Microenvironment</h3>
-        <p>
-          Investigating tumor–immune interactions and molecular mechanisms
-          that contribute to immune suppression.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>T-Cell Biology & TILs</h3>
-        <p>
-          T-cell functional assays, tumor-infiltrating lymphocytes,
-          tumor-reactive T-cell generation and cytotoxicity studies.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Extracellular Vesicles</h3>
-        <p>
-          Studying tumor-derived extracellular vesicles and their role in
-          immune regulation and cancer progression.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>3D Tumor & Organoid Models</h3>
-        <p>
-          Development and application of preclinical models including
-          clear cell renal cell carcinoma organoid systems.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Translational Cancer Research</h3>
-        <p>
-          Connecting mechanistic cancer biology with preclinical therapeutic
-          target validation and clinically relevant research questions.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-  <section id="experience">
-
-    <h2>Research Experience</h2>
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-
-        <h3>Earle A. Chiles Research Institute</h3>
-
-        <div class="date">Research Fellow · 2024–Present</div>
-
-        <p>
-          Research focus: Role of ARF6-GTP in mediating tumor-cell intrinsic
-          defense and repair mechanisms that contribute to resistance to
-          T-cell attack.
-        </p>
-
-        <br>
-
-        <ul>
-          <li>Developing and validating experimental methods and protocols.</li>
-          <li>Studying cytokine-mediated melanoma cell death.</li>
-          <li>Investigating whether ARF6 knockdown sensitizes melanoma cells to immune attack.</li>
-          <li>Maintaining melanoma cell lines and presenting research findings.</li>
-        </ul>
-
-      </div>
-
-      <div class="timeline-item">
-
-        <h3>Memorial Sloan Kettering Cancer Center</h3>
-
-        <div class="date">Research Associate · 2023–2024</div>
-
-        <p>
-          Research focused on developing patient-specific antigenic T cells
-          for renal cell carcinoma using immunogenic cell death.
-        </p>
-
-        <br>
-
-        <ul>
-          <li>Developed methods to generate tumor-reactive CD8 T cells.</li>
-          <li>Developed clear cell renal cell carcinoma organoid models.</li>
-          <li>Performed FFPE processing and CA9 staining.</li>
-          <li>Worked with clinical mouse models of ccRCC.</li>
-        </ul>
-
-      </div>
-
-      <div class="timeline-item">
-
-        <h3>Medical College of Wisconsin</h3>
-
-        <div class="date">Postdoctoral Fellow · 2019–2023</div>
-
-        <p>
-          Research focused on the role of SPHK1 and sphingosine-1-phosphate
-          signaling in the immunosuppressive tumor microenvironment of
-          ovarian cancer.
-        </p>
-
-        <br>
-
-        <ul>
-          <li>Isolation and characterization of extracellular vesicles.</li>
-          <li>In-vitro and in-vivo cancer research.</li>
-          <li>Investigation of tumor–immune interactions.</li>
-          <li>Presentation of research at AACR and scientific meetings.</li>
-          <li>Contribution to grants, research papers and review articles.</li>
-        </ul>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section id="publications">
-
-    <h2>Selected Publications</h2>
-
-    <div class="publication">
-      <strong>
-        Tumor Derived Extracellular Vesicles Drive T Cell Exhaustion in Tumor
-        Microenvironment through Sphingosine Mediated Signaling and Impacting
-        Immunotherapy Outcomes in Ovarian Cancer.
-      </strong>
-      <br>
-      <em>Advanced Science, 2022</em>
-      <br>
-      Prachi Gupta et al.
-    </div>
-
-    <div class="publication">
-      <strong>
-        Autoantibodies against TYMS and PDLIM1 proteins detected as
-        circulatory signatures in Indian breast cancer patients.
-      </strong>
-      <br>
-      <em>PROTEOMICS – Clinical Applications, 2016</em>
-      <br>
-      Prachi Gupta et al.
-    </div>
-
-    <div class="publication">
-      <strong>
-        ERBB3-induced furin promotes the progression and metastasis of
-        ovarian cancer via the IGF1R/STAT3 signaling axis.
-      </strong>
-      <br>
-      <em>Oncogene, 2020</em>
-      <br>
-      Changliang Chen, Prachi Gupta et al.
-    </div>
-
-    <div class="publication">
-      <strong>
-        RNA-binding protein FXR1 drives cMYC translation by recruiting
-        eIF4F complex to the translation start site.
-      </strong>
-      <br>
-      <em>Cell Reports, 2021</em>
-      <br>
-      Jasmine George et al., including Prachi Gupta.
-    </div>
-
-    <div class="publication">
-      <strong>
-        B cells as an immune-regulatory signature in ovarian cancer.
-      </strong>
-      <br>
-      <em>Cancers, 2019</em>
-      <br>
-      Prachi Gupta et al.
-    </div>
-
-    <div class="publication">
-      <strong>
-        Rapid activation of ARF6 after RAF inhibition augments BRAFV600E
-        and promotes therapy resistance.
-      </strong>
-      <br>
-      <em>Oncogene, 2026</em>
-      <br>
-      Junhua Wang et al., including Prachi Gupta.
-    </div>
-
-    <p style="margin-top:25px;">
-      <a href="https://scholar.google.com/citations?user=qyJ0aRIAAAAJ&hl=en"
-         target="_blank">
-        → View Prachi Gupta's complete publication profile on Google Scholar
-      </a>
-    </p>
-
-  </section>
-
-  <section id="expertise">
-
-    <h2>Scientific & Technical Expertise</h2>
-
-    <div class="skills">
-
-      <span class="skill">Multicolor Flow Cytometry</span>
-      <span class="skill">FlowJo</span>
-      <span class="skill">T-Cell Assays</span>
-      <span class="skill">TIL Isolation</span>
-      <span class="skill">Cytotoxicity Assays</span>
-      <span class="skill">3D Tumor Models</span>
-      <span class="skill">Organoid Models</span>
-      <span class="skill">Mouse Models</span>
-      <span class="skill">Extracellular Vesicles</span>
-      <span class="skill">Western Blotting</span>
-      <span class="skill">PCR</span>
-      <span class="skill">ELISA</span>
-      <span class="skill">Immunoprecipitation</span>
-      <span class="skill">Immunohistochemistry</span>
-      <span class="skill">Immunofluorescence</span>
-      <span class="skill">Confocal Microscopy</span>
-      <span class="skill">Immune Phenotyping</span>
-      <span class="skill">GSEA</span>
-      <span class="skill">Proteomics</span>
-      <span class="skill">Transcriptomics</span>
-      <span class="skill">Seahorse Assay</span>
-
-    </div>
-
-  </section>
-
-  <section id="education">
-
-    <h2>Education</h2>
-
-    <div class="education-item">
-      <h3>PhD in Cancer Biology</h3>
+<section id="about">
+  <h2>About</h2>
+  <div class="about-grid">
+    <div>
       <p>
-        Council of Scientific and Industrial Research – Indian Institute
-        of Toxicology Research, Lucknow, India
+        I am a PhD-trained cancer biologist with research experience across
+        immuno-oncology, tumor microenvironment biology, extracellular vesicles,
+        T-cell responses, molecular signaling, biomarker discovery, and translational
+        cancer models.
+      </p>
+      <p>
+        My work has examined how tumor-cell signaling and the tumor microenvironment
+        influence immune suppression, tumor progression, therapeutic resistance, and
+        response to immunotherapy. I have worked across ovarian cancer, renal cell
+        carcinoma, melanoma, and breast cancer research programs.
+      </p>
+      <p>
+        My research approach combines <strong>in vitro and in vivo experimentation</strong>,
+        immune-cell functional assays, molecular biology, flow cytometry, patient-derived
+        models, organoid systems, extracellular-vesicle biology, and proteomics/transcriptomics
+        analysis.
       </p>
     </div>
-
-    <div class="education-item">
-      <h3>Master of Science in Biotechnology</h3>
-      <p>Amity University, Noida, India</p>
-    </div>
-
-    <div class="education-item">
-      <h3>Bachelor of Science</h3>
-      <p>Chaudhary Charan Singh University, Meerut, India</p>
-    </div>
-
-  </section>
-
-  <section>
-
-    <h2>Awards & Research Funding</h2>
 
     <div class="card">
-
-      <ul>
-        <li>
-          Ovarian Cancer Research Alliance —
-          Ann Schreiber Mentored Investigator Award, 2021
-        </li>
-
-        <li>
-          Department of Defense Ovarian Cancer Research Program
-          Pilot Award — Key Personnel, 2021–2023
-        </li>
-      </ul>
-
+      <h3>Scientific Profile</h3>
+      <p class="small">
+        Research interests at the intersection of cancer cell biology and the immune system.
+      </p>
+      <div class="stats">
+        <div class="stat"><strong>7+</strong><span>Years postdoctoral research</span></div>
+        <div class="stat"><strong>4+</strong><span>Cancer research areas</span></div>
+        <div class="stat"><strong>2</strong><span>Major research awards</span></div>
+      </div>
     </div>
+  </div>
+</section>
 
-  </section>
+<section id="research">
+  <h2>Research Focus</h2>
+  <p class="section-lead">
+    Research programs have centered on mechanisms that connect tumor biology,
+    immune regulation, therapeutic response, and clinically relevant cancer models.
+  </p>
 
-  <section id="contact" class="contact">
-
-    <div class="contact-content">
-
-      <h2>Research Profiles & Contact</h2>
-
+  <div class="research-grid">
+    <div class="card research-card">
+      <div class="num">01 · IMMUNO-ONCOLOGY</div>
+      <h3>Tumor–Immune Interactions</h3>
       <p>
-        For publications, citations and research interests:
+        Understanding mechanisms that regulate T-cell activity, immune suppression,
+        tumor-cell vulnerability, and anti-tumor immune responses.
       </p>
-
-      <p style="margin-top:15px;">
-        <a href="https://scholar.google.com/citations?user=qyJ0aRIAAAAJ&hl=en"
-           target="_blank">
-          Google Scholar
-        </a>
-        &nbsp; · &nbsp;
-        <a href="https://www.linkedin.com/in/prachi-gupta-609/"
-           target="_blank">
-          LinkedIn
-        </a>
-      </p>
-
-      <p style="margin-top:20px;">
-        Open to scientific collaborations and research opportunities
-        in cancer biology, immuno-oncology and translational research.
-      </p>
-
     </div>
 
-  </section>
+    <div class="card research-card">
+      <div class="num">02 · TUMOR MICROENVIRONMENT</div>
+      <h3>Immune Suppression</h3>
+      <p>
+        Investigating signaling and extracellular-vesicle mechanisms that shape the
+        immunosuppressive tumor microenvironment and influence therapeutic response.
+      </p>
+    </div>
 
-  <footer>
+    <div class="card research-card">
+      <div class="num">03 · TRANSLATIONAL CANCER RESEARCH</div>
+      <h3>Target & Model Development</h3>
+      <p>
+        Developing and applying cellular, organoid, patient-derived, and mouse models
+        to investigate mechanisms and evaluate potential therapeutic strategies.
+      </p>
+    </div>
 
-    © 2026 Prachi Gupta, PhD · Cancer Biology & Immuno-Oncology
+    <div class="card research-card">
+      <div class="num">04 · EXTRACELLULAR VESICLES</div>
+      <h3>EV Biology & Signaling</h3>
+      <p>
+        Characterizing tumor-derived extracellular vesicles, their molecular cargo,
+        and their role in immune regulation, tumor progression, and metastasis.
+      </p>
+    </div>
 
-  </footer>
+    <div class="card research-card">
+      <div class="num">05 · T-CELL BIOLOGY</div>
+      <h3>Functional Immune Assays</h3>
+      <p>
+        Experience with T-cell and B-cell functional assays, cytotoxicity,
+        proliferation, immune phenotyping, and primary human TIL culture.
+      </p>
+    </div>
+
+    <div class="card research-card">
+      <div class="num">06 · BIOMARKERS</div>
+      <h3>Molecular & Proteomic Analysis</h3>
+      <p>
+        Experience with biomarker discovery, proteomics/transcriptomics pathway analysis,
+        GSEA, immune phenotyping, and mechanistic cancer biology.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Research Experience</h2>
+  <p class="section-lead">
+    Research experience across academic cancer research environments, with increasing
+    emphasis on immuno-oncology, translational models, experimental strategy, and
+    collaborative research.
+  </p>
+
+  <div class="timeline">
+
+    <div class="role">
+      <h3>Research Fellow · Earle A. Chiles Research Institute</h3>
+      <div class="meta">Portland, Oregon · 2024–Present · PI: Allie Grossmann</div>
+      <div class="topic">Role of ARF6-GTP in tumor-cell intrinsic defense and repair mechanisms to resist T-cell attack.</div>
+      <ul>
+        <li>Develop and validate experimental methods and protocols investigating tumor-cell responses to immune attack.</li>
+        <li>Study cytokine-mediated melanoma cell death and evaluate whether ARF6 knockdown sensitizes melanoma cells to immune attack.</li>
+        <li>Maintain and preserve melanoma cell lines and support reproducible experimental workflows.</li>
+        <li>Organize and present research findings in internal and external scientific meetings.</li>
+        <li>Collaborate across projects and contribute to validation of experimental results.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <h3>Research Associate · Memorial Sloan Kettering Cancer Center</h3>
+      <div class="meta">New York, New York · 2023–2024 · PI: Emily Cheng</div>
+      <div class="topic">Generating renal carcinoma patient-specific antigenic T cells in vitro using immunogenic cell death.</div>
+      <ul>
+        <li>Developed a method to generate tumor-reactive CD8 T cells using immunogenic cell death in vitro.</li>
+        <li>Developed a clear cell renal cell carcinoma (ccRCC) organoid model.</li>
+        <li>Performed microtome sectioning and FFPE processing, including CA9 staining.</li>
+        <li>Worked with clinical mouse models of ccRCC to support translational cancer research.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <h3>Postdoctoral Fellow · Medical College of Wisconsin</h3>
+      <div class="meta">Milwaukee, Wisconsin · 2019–2023 · PI: Sunila Pradeep</div>
+      <div class="topic">Role of SPHK1 in the immunosuppressive tumor microenvironment in ovarian cancer.</div>
+      <ul>
+        <li>Isolated and characterized extracellular vesicles from ovarian cancer cells and analyzed their proteome.</li>
+        <li>Designed and performed in vitro and in vivo experiments addressing tumor progression and immune suppression.</li>
+        <li>Investigated S1P-mediated signaling and extracellular-vesicle mechanisms of immune suppression.</li>
+        <li>Contributed to grant writing, research manuscripts, review articles, and scientific presentations.</li>
+        <li>Presented research at AACR and institutional scientific meetings.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section id="impact">
+  <h2>Research Highlights</h2>
+  <p class="section-lead">
+    Selected themes that demonstrate the breadth and translational direction of Prachi's research.
+  </p>
+
+  <div class="highlight-grid">
+    <div class="highlight">
+      <h3>Immune Suppression in Ovarian Cancer</h3>
+      <p>
+        Research identified S1P-mediated signaling and extracellular-vesicle mechanisms
+        associated with immune suppression, including effects on PD-L1 expression and
+        CD8 T-cell activity.
+      </p>
+    </div>
+
+    <div class="highlight">
+      <h3>Patient-Relevant Cancer Models</h3>
+      <p>
+        Experience developing ccRCC organoid models, generating tumor-reactive CD8 T cells,
+        and working with clinical mouse models to support translational investigation.
+      </p>
+    </div>
+
+    <div class="highlight">
+      <h3>Tumor-Cell Resistance to Immune Attack</h3>
+      <p>
+        Current research investigates ARF6-GTP and tumor-cell intrinsic defense and repair
+        mechanisms that may influence resistance to T-cell-mediated attack in melanoma.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <h2>Selected Publications</h2>
+  <p class="section-lead">
+    Selected peer-reviewed publications spanning immuno-oncology, extracellular vesicles,
+    ovarian cancer biology, biomarkers, and melanoma signaling.
+  </p>
+
+  <div class="card">
+
+    <div class="pub">
+      <div class="pub-title">
+        Tumor Derived Extracellular Vesicles Drive T Cell Exhaustion in Tumor Microenvironment
+        through Sphingosine Mediated Signaling and Impacting Immunotherapy Outcomes in Ovarian Cancer
+      </div>
+      <div class="pub-meta">Advanced Science · 2022 · Prachi Gupta et al.</div>
+      <span class="pub-note">Immuno-oncology · Extracellular vesicles · T-cell exhaustion</span>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">
+        eIF4E Enriched Extracellular Vesicles Induce Immunosuppressive Macrophages through
+        HMGCR-Mediated Metabolic Rewiring
+      </div>
+      <div class="pub-meta">Advanced Science · 2025 · Sonam Mittal et al., including Prachi Gupta</div>
+      <span class="pub-note">Tumor microenvironment · EV biology · Macrophages</span>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">
+        Rapid activation of ARF6 after RAF inhibition augments BRAFV600E and promotes therapy resistance
+      </div>
+      <div class="pub-meta">Oncogene · 2026 · Junhua Wang et al., including Prachi Gupta</div>
+      <span class="pub-note">Melanoma · ARF6 signaling · Therapy resistance</span>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">
+        RNA-binding protein FXR1 drives cMYC translation by recruiting eIF4F complex to the translation start site
+      </div>
+      <div class="pub-meta">Cell Reports · 2021 · Jasmine George et al., including Prachi Gupta</div>
+      <span class="pub-note">Ovarian cancer · Molecular signaling</span>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">
+        Oncostatin M Receptor–Targeted Antibodies Suppress STAT3 Signaling and Inhibit Ovarian Cancer Growth
+      </div>
+      <div class="pub-meta">Cancer Research · 2021 · Anjali Geethadevi et al., including Prachi Gupta</div>
+      <span class="pub-note">Target validation · STAT3 signaling · Preclinical research</span>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">
+        B cells as an immune-regulatory signature in ovarian cancer
+      </div>
+      <div class="pub-meta">Cancers · 2019 · Prachi Gupta et al.</div>
+      <span class="pub-note">Tumor immunology · Review</span>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">
+        Autoantibodies against TYMS and PDLIM1 proteins detected as circulatory signatures in Indian breast cancer patients
+      </div>
+      <div class="pub-meta">PROTEOMICS–Clinical Applications · 2016 · Prachi Gupta et al.</div>
+      <span class="pub-note">Biomarker discovery · Breast cancer</span>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">
+        Protocol for the isolation of tumor cell-derived extracellular vesicles followed by
+        in vivo metastasis assessment in a murine ovarian cancer model
+      </div>
+      <div class="pub-meta">STAR Protocols · 2024 · Sonam Mittal et al., including Prachi Gupta</div>
+      <span class="pub-note">Experimental methods · EV isolation · In vivo models</span>
+    </div>
+
+    <p style="margin:24px 0 0;">
+      <a href="https://scholar.google.com/citations?user=qyJ0aRIAAAAJ&hl=en" target="_blank" rel="noopener">
+        View complete publication profile on Google Scholar →
+      </a>
+    </p>
+  </div>
+</section>
+
+<section id="expertise">
+  <h2>Scientific & Technical Expertise</h2>
+  <p class="section-lead">
+    A multidisciplinary experimental toolkit spanning molecular biology, immunology,
+    cancer models, translational assays, and data analysis.
+  </p>
+
+  <div class="skill-groups">
+
+    <div class="card skill-group">
+      <h3>Immuno-Oncology & Cell Biology</h3>
+      <div class="tags">
+        <span class="tag">T-cell assays</span>
+        <span class="tag">B-cell assays</span>
+        <span class="tag">Cytotoxicity</span>
+        <span class="tag">Immune phenotyping</span>
+        <span class="tag">Primary human TIL culture</span>
+        <span class="tag">Tumor–immune interactions</span>
+        <span class="tag">Extracellular vesicles</span>
+        <span class="tag">Tumor microenvironment</span>
+      </div>
+    </div>
+
+    <div class="card skill-group">
+      <h3>Molecular & Protein Biology</h3>
+      <div class="tags">
+        <span class="tag">Western blot</span>
+        <span class="tag">PCR</span>
+        <span class="tag">Transfection</span>
+        <span class="tag">Immunoprecipitation</span>
+        <span class="tag">ELISA</span>
+        <span class="tag">IHC</span>
+        <span class="tag">Immunofluorescence</span>
+        <span class="tag">Confocal microscopy</span>
+      </div>
+    </div>
+
+    <div class="card skill-group">
+      <h3>Preclinical & Translational Models</h3>
+      <div class="tags">
+        <span class="tag">In vitro models</span>
+        <span class="tag">In vivo experiments</span>
+        <span class="tag">Mouse tumor models</span>
+        <span class="tag">Tumor injection</span>
+        <span class="tag">Animal breeding</span>
+        <span class="tag">Human patient samples</span>
+        <span class="tag">ccRCC organoids</span>
+        <span class="tag">Melanoma models</span>
+      </div>
+    </div>
+
+    <div class="card skill-group">
+      <h3>Flow Cytometry & Data Analysis</h3>
+      <div class="tags">
+        <span class="tag">Multicolor flow cytometry</span>
+        <span class="tag">FlowJo</span>
+        <span class="tag">GSEA</span>
+        <span class="tag">Proteomics</span>
+        <span class="tag">Transcriptomics</span>
+        <span class="tag">Ingenuity Pathway Analysis</span>
+        <span class="tag">Seahorse assay</span>
+        <span class="tag">Immune profiling</span>
+      </div>
+    </div>
+
+    <div class="card skill-group">
+      <h3>Research & Scientific Communication</h3>
+      <div class="tags">
+        <span class="tag">Experimental design</span>
+        <span class="tag">Protocol development</span>
+        <span class="tag">Grant writing</span>
+        <span class="tag">Manuscript writing</span>
+        <span class="tag">Review articles</span>
+        <span class="tag">Scientific presentations</span>
+        <span class="tag">Cross-functional collaboration</span>
+        <span class="tag">Lab organization</span>
+      </div>
+    </div>
+
+    <div class="card skill-group">
+      <h3>Additional Experimental Skills</h3>
+      <div class="tags">
+        <span class="tag">Cell culture</span>
+        <span class="tag">Retro-orbital blood collection</span>
+        <span class="tag">Oral gavage</span>
+        <span class="tag">IP tumor injection</span>
+        <span class="tag">Subcutaneous injection</span>
+        <span class="tag">Intradermal injection</span>
+        <span class="tag">Toxicology studies</span>
+        <span class="tag">FFPE processing</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="edu-grid">
+    <div class="card edu">
+      <h3>PhD, Cancer Biology</h3>
+      <div class="year">2010–2018</div>
+      <p>
+        Council of Scientific and Industrial Research – Indian Institute of Toxicology Research,
+        Lucknow, India.
+      </p>
+      <p class="small">
+        Dissertation: Characterization of repertoire of humoral immune response and cancer stem
+        cells associated microvesicles in breast cancer.
+      </p>
+    </div>
+
+    <div class="card edu">
+      <h3>MS, Biotechnology</h3>
+      <div class="year">2007–2010</div>
+      <p>Amity University, India.</p>
+    </div>
+
+    <div class="card edu">
+      <h3>BS</h3>
+      <div class="year">2004–2007</div>
+      <p>CCS University, India.</p>
+    </div>
+  </div>
+</section>
+
+<section id="awards">
+  <h2>Awards & Research Funding</h2>
+  <div class="award-grid">
+    <div class="card award">
+      <h3>Ovarian Cancer Research Alliance</h3>
+      <div class="year">Ann Schreiber Mentored Investigator Award · 2021</div>
+      <p class="small">
+        Recognition supporting research in ovarian cancer biology.
+      </p>
+    </div>
+
+    <div class="card award">
+      <h3>U.S. Department of Defense</h3>
+      <div class="year">Ovarian Cancer Research Program Pilot Award · 2021–2023</div>
+      <p class="small">
+        Key Person on the Pradeep (PI) award.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Research Profiles</h2>
+  <div class="contact">
+    <p>
+      For scientific collaborations, research opportunities, or professional inquiries,
+      please connect through the profiles below.
+    </p>
+    <div class="buttons" style="margin-top:18px;">
+      <a class="btn" style="background:var(--navy);border-color:var(--navy);" href="https://scholar.google.com/citations?user=qyJ0aRIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="btn" style="background:var(--navy);border-color:var(--navy);" href="https://www.linkedin.com/in/prachi-gupta-609/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="small" style="margin-top:18px;">
+      This website intentionally does not publish private home-address or personal contact information.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © 2026 Prachi Gupta, PhD · Cancer Biology · Immuno-Oncology · Translational Cancer Research
+</footer>
 
 </body>
 </html>
